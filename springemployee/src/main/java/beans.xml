@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- Setter Injection -->
+	<bean id="employeeJames" class="com.spring.employee.Employee">
+		<property name="empID" value="1A"></property>
+		<property name="empName" value="James"></property>
+		<property name="empAddress" ref="addressJames"></property>
+	</bean>
+
+	<!-- Setter Injection -->
+	<bean id="employeeDavid" class="com.spring.employee.Employee">
+		<property name="empID" value="2"></property>
+		<property name="empName" value="David"></property>
+		<property name="empAddress" ref="addressDavid"></property>
+	</bean>
+
+	<!-- Constructor Injection -->
+	<bean id="employeeJabez" class="com.spring.employee.Employee">
+		<constructor-arg name="empID" value="3"></constructor-arg>
+		<constructor-arg name="empName" value="Jabez"></constructor-arg>
+		<constructor-arg name="empAddress" ref="addressJabez"></constructor-arg>
+	</bean>
+
+	<!-- Constructor Injection -->
+	<bean id="addressJames" class="com.spring.employee.Address">
+		<constructor-arg name="doorNo" value="22"></constructor-arg>
+		<constructor-arg name="street"
+			value="New Nainar Street"></constructor-arg>
+		<constructor-arg name="city" value="Subramaniyapuram"></constructor-arg>
+		<constructor-arg name="pincode" value="628251"></constructor-arg>
+	</bean>
+	<!-- Setter Injection -->
+	<bean id="addressDavid" class="com.spring.employee.Address">
+		<property name="doorNo" value="1"></property>
+		<property name="street" value="GH Road"></property>
+		<property name="city" value="Pandaravilai"></property>
+		<property name="pincode" value="628251"></property>
+	</bean>
+
+	<!-- Setter Injection -->
+	<bean id="addressJabez" class="com.spring.employee.Address">
+		<property name="doorNo" value="140"></property>
+		<property name="street" value="Balamudali Street"></property>
+		<property name="city" value="Kelambakkam"></property>
+		<property name="pincode" value="603103"></property>
+	</bean>
+</beans>
