@@ -4,7 +4,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-//Code Changed to Test GIT
+//Code Changed to Test GIT conflict Test
 
 /**
  * Unit test for simple App.
